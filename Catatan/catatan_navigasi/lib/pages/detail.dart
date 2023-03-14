@@ -1,11 +1,10 @@
 import 'package:catatan_navigasi/pages/detailUser.dart';
 import 'package:flutter/material.dart';
-// import 'package:url_launcher/url_launcher.dart';
 
 import 'package:catatan_navigasi/identitas.dart';
 
 class DetailPage extends StatefulWidget {
-  const DetailPage({super.key, required String this.pesan});
+  const DetailPage({super.key, required this.pesan});
   final String pesan;
 
   @override
@@ -17,7 +16,7 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Detail Page"),
+        title: const Text("Detail Page"),
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
@@ -37,15 +36,15 @@ class _DetailPageState extends State<DetailPage> {
                 children: [
                   Text(
                     dataIdentitas.nama,
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
                   Text(
                     dataIdentitas.username,
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
                   Text(
                     widget.pesan,
-                    style: TextStyle(color: Colors.green),
+                    style: const TextStyle(color: Colors.green),
                   ),
                 ],
               ),
@@ -54,27 +53,6 @@ class _DetailPageState extends State<DetailPage> {
         },
         itemCount: listIdentitas.length,
       ),
-
-      // Center(
-      //   child: Column(
-      //     children: [
-      //       // Text(pesan),
-      //       // ElevatedButton(
-      //       //   onPressed: () {
-      //       //     // _launchURL("https://google.com");
-      //       //   },
-      //       //   child: Text("Go to Google.com"),
-      //       // ),
-      //     ],
-      //   ),
-      // ),
     );
   }
-  // Future<void> _launchURL(String url) async {
-  //   if (await canLaunch(url)) {
-  //     await launch(url);
-  //   } else {
-  //     throw 'Could not launch $url';
-  //   }
-  // }
 }

@@ -1,6 +1,7 @@
 import 'package:catatan_navigasi/pages/detail.dart';
 import 'package:catatan_navigasi/pages/login.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -61,9 +62,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 }));
               },
             ),
+            ElevatedButton(
+              onPressed: () {
+                _launchURL('https://github.com/rfqma');
+              },
+              child: Text("Go to GitHub"),
+            ),
           ],
         ),
       ),
     );
   }
+
+  Future<void> _launchURL(String url) async {
+    final Uri finalUrl = Uri.parse(url);
+    if (!await launchUrl(finalUrl)) {
+      throw Exception('Could not launch $finalUrl');
+    }
+  }
 }
+// launchUrl Troubleshoot
+// https://pub.dev/packages/url_launcher#android

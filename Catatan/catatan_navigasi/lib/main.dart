@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'package:catatan_navigasi/pages/home.dart';
 import 'package:catatan_navigasi/pages/login.dart';
 
 void main() {
@@ -17,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: const LoginPage(),
     );
   }
 }

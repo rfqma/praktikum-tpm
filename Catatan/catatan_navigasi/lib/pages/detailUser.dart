@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'detail.dart';
 
 class DetailUserPage extends StatelessWidget {
   final String identitasNama;
