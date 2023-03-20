@@ -16,9 +16,10 @@ class _IdentitasState extends State<Identitas> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tugas Praktikum Teknologi dan Pemrograman Mobile"),
+        title: const Text("Tugas Praktikum Teknologi dan Pemrograman Mobile"),
       ),
       body: ListView.builder(
+        itemCount: listIdentity.length,
         itemBuilder: (context, index) {
           final Identity identity = listIdentity[index];
           return Card(
@@ -28,11 +29,7 @@ class _IdentitasState extends State<Identitas> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => DetailIdentitas(
-                              identityName: listIdentity[index].name,
-                              identityFotoUrls: listIdentity[index].fotoUrls,
-                              identityUsername: listIdentity[index].username,
-                              identityEmail: listIdentity[index].email,
-                              identityCompany: listIdentity[index].company,
+                              identity: identity,
                             )));
               },
               child: Column(
@@ -44,12 +41,12 @@ class _IdentitasState extends State<Identitas> {
                         height: 100,
                         child: Image.network(identity.fotoUrls),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 30,
                       ),
                       Text(
                         identity.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -59,7 +56,6 @@ class _IdentitasState extends State<Identitas> {
             ),
           );
         },
-        itemCount: listIdentity.length,
       ),
     );
   }

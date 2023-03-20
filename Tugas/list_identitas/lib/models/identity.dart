@@ -18,7 +18,7 @@ var listIdentity = [
   Identity(
     name: 'Elon Musk',
     fotoUrls:
-    'https://media.suara.com/pictures/970x544/2022/05/09/48179-elon-musk.jpg',
+        'https://media.suara.com/pictures/970x544/2022/05/09/48179-elon-musk.jpg',
     username: 'elonmusk',
     email: [
       'elonmusk@gmail.com',
@@ -38,7 +38,7 @@ var listIdentity = [
   Identity(
     name: 'Jeff Bezos',
     fotoUrls:
-    'https://asset.kompas.com/crops/Nzd8Wg_VyGH8dM9CI4J1fqIupco=/0x0:3159x2106/750x500/data/photo/2021/05/02/608eb6854cbba.jpg',
+        'https://asset.kompas.com/crops/Nzd8Wg_VyGH8dM9CI4J1fqIupco=/0x0:3159x2106/750x500/data/photo/2021/05/02/608eb6854cbba.jpg',
     username: 'jeffbezos',
     email: [
       'jeffbezos@gmail.com',
@@ -58,7 +58,7 @@ var listIdentity = [
   Identity(
     name: 'Warren Buffet',
     fotoUrls:
-    'http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSrx0_1wW6kGpqy5trTntG_OZEtdjbPApgwYM-Go_1Qb1gzw7_BT5lE999mfOpzw0rO',
+        'http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSrx0_1wW6kGpqy5trTntG_OZEtdjbPApgwYM-Go_1Qb1gzw7_BT5lE999mfOpzw0rO',
     username: 'warrenbuffet',
     email: [
       'warrenbuffet@gmail.com',
@@ -78,7 +78,7 @@ var listIdentity = [
   Identity(
     name: 'Bill Gates',
     fotoUrls:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Bill_Gates_2017_%28cropped%29.jpg/330px-Bill_Gates_2017_%28cropped%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Bill_Gates_2017_%28cropped%29.jpg/330px-Bill_Gates_2017_%28cropped%29.jpg',
     username: 'billgates',
     email: [
       'billgates@gmail.com',
@@ -94,7 +94,7 @@ var listIdentity = [
   Identity(
     name: 'Michael Bloomberg',
     fotoUrls:
-    'https://static01.nyt.com/images/2020/02/26/opinion/26Blow/merlin_169183047_302517ca-2f53-4543-b733-3ac18bdcaa1d-mediumSquareAt3X.jpg',
+        'https://static01.nyt.com/images/2020/02/26/opinion/26Blow/merlin_169183047_302517ca-2f53-4543-b733-3ac18bdcaa1d-mediumSquareAt3X.jpg',
     username: 'michaelbloomberg',
     email: [
       'michaelbloomberg@gmail.com',
