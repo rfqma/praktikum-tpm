@@ -1,6 +1,7 @@
 import '../controller/api_data_source.dart';
 import '../model/list_film.dart';
 import 'package:flutter/material.dart';
+import './page_detail_film.dart';
 
 class PageListFilms extends StatefulWidget {
   final String text;
@@ -61,7 +62,12 @@ class _PageListFilmsState extends State<PageListFilms> {
 
   Widget _buildItemUsers(Search film) {
     return InkWell(
-      onTap: () => {},
+      onTap: () => {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => PageDetailFilms(film: film)))
+      },
       child: Card(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -75,10 +81,7 @@ class _PageListFilmsState extends State<PageListFilms> {
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(film.title!),
-                Text(film.year!)
-              ],
+              children: [Text(film.title!), Text(film.year!)],
             ),
           ],
         ),
