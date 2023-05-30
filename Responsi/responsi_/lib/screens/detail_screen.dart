@@ -81,6 +81,13 @@ class DetailScreen extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
+              Text(
+                "His/Her Role is ${agenteController.agente.role!}",
+                style: TextStyle(fontSize: 16, color: Colors.white),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
               const Text(
                 'Abilities',
                 style: TextStyle(fontSize: 25, color: Colors.white),
@@ -94,7 +101,7 @@ class DetailScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    padding: const EdgeInsets.only(top: 450),
+                    padding: const EdgeInsets.only(top: 500),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: agenteController.agente.abilities!
@@ -117,7 +124,7 @@ class DetailScreen extends StatelessWidget {
                                           fontSize: 12,
                                           color: Colors.white,
                                           letterSpacing: 2),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ],

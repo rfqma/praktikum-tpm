@@ -5,7 +5,7 @@ class ValorantModel {
   String? imgBack;
   List<dynamic>? abilities;
   String? displayIcon;
-  List<String>? role;
+  String? role;
 
   ValorantModel(
       {this.description,
@@ -24,7 +24,7 @@ class ValorantModel {
       img: json['fullPortraitV2'],
       displayIcon: json['displayIcon'],
       abilities: json['abilities'],
-      role: json[{'role'}],
+      role: json['role']?['displayName'],
     );
   }
 }
