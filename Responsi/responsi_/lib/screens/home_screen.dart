@@ -1,9 +1,24 @@
 import 'package:responsi_/controllers/controller_valorant.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
+import 'package:responsi_/screens/login_screen.dart';
+import 'package:responsi_/utilities/auth_manager.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final AuthManager _authManager = AuthManager();
+
+  Future<void> _logout(BuildContext context) async {
+    await _authManager.logout();
+    Navigator.pushReplacementNamed(context, '/login');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +27,14 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.grey[850],
         shadowColor: Colors.grey[850],
         title: const Text('Valorant Agent'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              _logout(context);
+            },
+            icon: const Icon(Icons.logout),
+          ),
+        ],
       ),
       body: GetBuilder<ValorantController>(
         builder: (agenteController) {
